@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="ru" style="height: 100%;">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/jquery.fullPage.css" />
+</head>
+<body>
+	<div class="popup_overlay" onClick="popup_out();"></div>
+	<div class="popup" id="thx">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Спасибо!</div>
+		<div class="popup_h2">Наш менеджер свяжется с вами в ближайшее время</div>
+		<div class="btn" onClick="popup_out();">закрыть</div>
+	</div>
+	<div class="popup" id="callback">
+		
+		<div class="popup_h1">Закажите звонок</div>
+		<div class="popup_h2">
+			Оставьте заявку, и наш специалист<br> свяжется с вами в течение часа.
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<div data-name="callback" class="button noselect btn">Позвоните мне</div>
+		</form>
+	</div>
+	<div class="popup" id="request">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Оставьте заявку</div>
+		<div class="popup_h2">
+			Оставьте заявку, и наш специалист свяжется<br>
+			с вами в ближайшее время.
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<? echo $desc_email ?>
+			<label class="email required">
+				<input type="text" name="email" placeholder="Ваш E-mail">
+			</label><br>
+			<div data-name="request" class="button noselect btn">Заказать</div>
+		</form>
+	</div>
+	<div class="popup" id="question">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Рассчитать стоимость</div>
+		<div class="popup_h2">
+			Заполните форму,<br>
+			и&nbsp;мы&nbsp;обязательно свяжемся с&nbsp;вами!
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<? echo $desc_email ?>
+			<label class="email required">
+				<input type="text" name="email" placeholder="Ваш E-mail">
+			</label><br>
+			<? echo $desc_ques ?>
+			<textarea class="ques" name="ques" placeholder="Опишите ваш проект"></textarea><br>
+			<div data-name="question" class="button noselect btn">Рассчитать стоимость</div>
+		</form>
+	</div>
+<section class="c1">
+		<div class="container">
+			<div class="row">
+				<a href="http://www.ugoriya-stroy.ru"><div class="visible-xs col-xs-4 mob_logo"></div></a>
+				<div class="visible-xs col-xs-7 mob_btn" onclick="popup('callback','Заказать звонок');">+7 (495) 966-05-61</div>
+				<a href="http://www.ugoriya-stroy.ru"><div class="hidden-xs col-sm-4 col-xs-12 t_logo"></div></a>
+				<div class="hidden-xs col-sm-4 col-xs-12"></div>
+				<div class="hidden-xs col-sm-2 col-xs-12 t_phone">+7 (495) 966-05-61</div>
+				<div class="hidden-xs col-sm-2 col-xs-12"><span class=" t_btn" onclick="popup('callback','Заказать звонок');">Заказать звонок</span></div>
+			</div>
+		</div>
+</section>
+<div id="fullpage">
+	<section class="c2 section active" id="section0">
+		<div class="container">
+			<div class="row title">
+				<h1 class="text col-xs-12 col-sm-12">ДЕМОНТАЖ ОБЪЕКТОВ<br>ЛЮБОЙ СЛОЖНОСТИ</h1>
+				<h2 class="text col-xs-12">ПО ВСЕЙ РОССИИ</h2>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-12 col-sm-3"></div>
+				<div class="col-xs-12 col-sm-2 item">Определение<br>сметы работ</div>
+				<div class="col-xs-12 col-sm-2 item">Оформляем<br>документацию</div>
+				<div class="col-xs-12 col-sm-2 item">Вывозим<br>мусор</div>
+			</div>
+		</div>
+	</section>
+	<section class="c3 section" id="section1">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 text-center">
+					<div class="h3 text">ЭКСПЕРТИЗА СООРУЖЕНИЯ БЕСПЛАТНО</div>
+					<div class="h4 text">Мы запустили специальную акцию для наших заказчиков<br>
+					При заказе работ по демонтажу мы проведём<br>
+					обследование сооружения бесплатно.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p>ПОЗВОНИТЕ СЕЙЧАС:</p><br>
+					<span class="text" onclick="popup('callback','Заказать звонок');">+7 (495) 966-05-61</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c4 section" id="section2">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 col-sm-1"></div>
+				<div class="col-xs-12 col-sm-8">
+					<div class="h3 border">ДЕМОНТАЖ ФУНДАМЕНТА</div><br>
+					<span>Мы осуществляем демонтаж фундаментов всех видов:</span>
+					<ul>
+						<li>сплошной (плитный) фундамент</li>
+						<li>ленточный фундамент</li>
+						<li>столбчатый фундамент</li>
+						<li>свайный фундамент</li>
+					</ul>
+					<p>Технический парк компании включает в себя<br>
+					стенорезные машины, гидромолоты<br>
+					и гидроножницы, экскаваторы и т.д., то есть все<br>
+					необходимое для выполнения демонтажа<br>
+					фундамента в кратчайшие сроки и с высоким<br>
+					уровнем качества.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c5 section" id="section3">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 col-sm-6"></div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="h3 border">ДЕМОНТАЖ ЗДАНИЯ</div><br>
+					<p>В зависимости от условий и пожеланий клиента наша<br>
+					компания готова выполнить как ручной,<br>
+					так и механизированный демонтаж домов и фасадов зданий.</p>
+					<span>Ручной демонтаж зданий:</span>
+					<ul>
+						<li>возможность проведения работ по демонтажу зданий там, где невоз-<br>
+						можно использование крупной техники</li>
+						<li>сохранение некоторой части строительных<br>
+						материалов и части стен домов</li>
+						<li>пониженный уровень шума во время проведения сноса объекта</li>
+					</ul>
+					<p>Все демонтажные работы выполняются нашей компанией<br>
+					специальными приспособлениями, такими как газовый резак,<br>
+					болторезный инструмент.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c6 section" id="section4">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 col-sm-1"></div>
+				<div class="col-xs-12 col-sm-7">
+					<div class="h3 border">ДЕМОНТАЖ МЕТАЛЛОКОНСТРУКЦИЙ</div><br>
+					<p>Компания "Дельта Строй" - одна из немногих<br>
+					на российском рынке, кто осуществляет демонтаж<br>
+					металлоконструкций.</p>
+					<p>Техническое оснащение компании полностью отвечает<br>
+					современным европейским стандартам, поэтому работы по<br>
+					сносу металлоконструкций осуществляются быстро,<br>
+					а главное - заказчик получает продукт, который имеет<br>
+					определенную ценность, а также площадку сразу<br>
+					после демонтажа, готовую к монтажу новых<br>
+					металлоконструкций или иных сооружений.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c7 section" id="section5">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 col-sm-6"></div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="h3 border">ДЕМОНТАЖ<br>ИНЖЕНЕРНЫХ СЕТЕЙ</div><br>
+					<span>"Дельта Строй" осуществляет демонтаж:</span>
+					<ul>
+						<li>систем отопления</li>
+						<li>водоснабжения</li>
+						<li>канализации</li>
+						<li>вентиляции</li>
+						<li>электропроводки</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c8 section" id="section6">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 col-sm-1"></div>
+				<div class="col-xs-12 col-sm-7">
+					<div class="h3 border">БЕРЕЖНЫЙ ДЕМОНТАЖ<br>И ХРАНЕНИЕ</div><br>
+					<p>Мы бережно демонтируем и храним все виды конструкций на<br>
+					нашей территории. Наши склады оснащены самым современным<br>
+					оборудованием (камеры видеонаблюдения, датчики пожарной<br>
+					сигнализации, тревожные системы оповещения),<br>
+					а сотрудники охраны регулярно проводят осмотр территории.</p>
+					<p>Технические средства позволяют вести наблюдение<br>
+					за территорией круглые сутки, записывать происходящее, а также<br>
+					контролировать ситуацию<br>
+					в случае подозрительных действий на объекте.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c9 section" id="section7">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 text-center">
+					<div class="h3 text">РАСЧЁТ СТОИМОСТИ ДЕМОНТАЖНЫХ РАБОТ</div>
+					<div class="h4 text">ОСТАВЬТЕ ЗАЯВКУ, И ВЫ ПОЛУЧИТЕ РАСЧЁТ СТОИМОСТИ ПРОЕКТА<br>
+					И КОНСУЛЬТАЦИЮ БЕСПЛАТНО</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<span class="text" onclick="popup('question','Заказать звонок');">Рассчитать стоимость</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c10 section" id="section8">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12">
+					<div class="h3">"ДЕЛЬТА СТРОЙ" - ВАШ НАДЁЖНЫЙ ПАРТНЁР</div>
+				</div>
+			</div>
+			<div class="row one">
+				<div class="col-xs-12 col-sm-6">
+					<div class="title">10</div>
+					<span>ЛЕТ НА РЫНКЕ</span>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="title">50</div>
+					<span>ЕДИНИЦ ТЕХНИКИ</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<div class="title2">2 350 000 м<sup>3</sup></div>
+					<span>ДЕМОНТИРОВАНО</span>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="title2">100%</div>
+					<span>ГАРАНТИЯ ВЫПОЛНЕНИЯ<br>РАБОТ В СРОК</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c11 section" id="section9">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12">
+					<div class="h3 text">НАШИ КЛИЕНТЫ</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-2"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/1.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-4"><img src="img/c11/2.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/3.png" class="img-responsive"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-2"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/4.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-4"><img src="img/c11/5.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/6.png" class="img-responsive"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-2"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/7.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-4"><img src="img/c11/8.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/9.png" class="img-responsive"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-2"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/10.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-4"><img src="img/c11/11.png" class="img-responsive"></div>
+				<div class="col-xs-12 col-sm-2"><img src="img/c11/12.png" class="img-responsive"></div>
+			</div>
+		</div>
+	</section>
+	<section class="c12 section" id="section10">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12">
+					<div class="h3">Благодарности</div>
+				</div>
+			</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-1"></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/1.jpg" class="fancybox"><img src="img/c12/1.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/2.jpg" class="fancybox"><img src="img/c12/2.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/3.jpg" class="fancybox"><img src="img/c12/3.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/4.jpg" class="fancybox"><img src="img/c12/4.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/5.jpg" class="fancybox"><img src="img/c12/5.jpg" alt="" class="img-responsive"></a></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-1"></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/6.jpg" class="fancybox"><img src="img/c12/6.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/7.jpg" class="fancybox"><img src="img/c12/7.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/8.jpg" class="fancybox"><img src="img/c12/8.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/9.jpg" class="fancybox"><img src="img/c12/9.jpg" alt="" class="img-responsive"></a></div>
+					<div class="col-xs-12 col-sm-2"><a href="img/c12/10.jpg" class="fancybox"><img src="img/c12/10.jpg" alt="" class="img-responsive"></a></div>
+				</div>
+		</div>
+	</section>
+	<section class="c13 section" id="section11">
+		<div class="container">
+			<div class="row title">
+				<div class="col-xs-12 text-center">
+					<div class="h3 text">УЗНАЙТЕ ПОДРОБНОСТИ<br>ПО ТЕЛЕФОНУ</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<span class="text" onclick="popup('callback','Заказать звонок');">+7 (495) 966-05-61</span><br>
+					<span>Наши специалисты ответят на все ваши вопросы.</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c14 section" id="section12">
+		<div class="container">
+			<div class="row map">
+				<div id="map">
+				<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=Jvk6kKJeE5aa7Cc2D9_b7uozE6L6JOn0&width=100%&height=400"></script>
+				</div>
+			</div>
+			<div class="row black">
+				<div class="col-xs-12 text-center">
+					<div class="h3 text">Контакты</div>
+				</div>
+			</div>
+			<div class="row black">
+				<div class="col-xs-12 col-sm-2"></div>
+				<div class="col-xs-12 col-sm-6">
+					<p>
+					г. Москва, ул. Бауманская, д.16,офис (А-201)<br>
+					E-mail: delta-st@ugoriya-stroy.ru<br>
+					+7 (495) 357-04-98
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+	<input type="hidden" name="prefix" class="prefix" value="<? echo $prefix; ?>">
+	<input type="hidden" name="phone_format" class="phone_format" value="<? echo $phone_format; ?>">
+	<input type="hidden" name="referer" value="<? echo $_SERVER['HTTP_REFERER'] ?>">
+	<input type="hidden" name="ref_url" value="<? echo $_SERVER['QUERY_STRING'] ?>">
+	<input type="hidden" class="formname" name="formname" value="">
+	<input type="hidden" class="sitename" name="sitename" value="<? echo $sitename; ?>">
+	<input type="hidden" class="emailsarr" name="emailsarr" value="<? echo $emailsArr; ?>">
+	
+	<script type="text/javascript" src="js/plugins.js"></script>
+</body>
+</html>
